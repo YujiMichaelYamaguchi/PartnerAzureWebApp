@@ -1,0 +1,70 @@
+﻿.bgpattern-test{
+    background-color: #888;
+    background-image: radial-gradient(closest-side, transparent 98%, #444 100%), radial-gradient(closest-side, transparent 98%, #444 100%);
+    background-position: 0 0, 15px 15px;
+    background-size: 30px 30px;
+}
+
+.bgpattern-ringi {
+    background-color: #8EB8FF;
+    background-image: linear-gradient(30deg, #666699 12%, transparent 12.5%, transparent 87%, #666699 87.5%, #666699), linear-gradient(150deg, #666699 12%, transparent 12.5%, transparent 87%, #666699 87.5%, #666699), linear-gradient(30deg, #666699 12%, transparent 12.5%, transparent 87%, #666699 87.5%, #666699), linear-gradient(150deg, #666699 12%, transparent 12.5%, transparent 87%, #666699 87.5%, #666699), linear-gradient(60deg, #F0F8FF 25%, transparent 25.5%, transparent 75%, #F0F8FF 75%, #F0F8FF), linear-gradient(60deg, #F0F8FF 25%, transparent 25.5%, transparent 75%, #F0F8FF 75%, #F0F8FF);
+    background-position: 0 0, 0 0, 12.5px 25px, 12.5px 25px, 0 0, 12.5px 25px;
+    background-size: 25px 50px;
+}
+
+.bgpattern-OCR {
+    background-color: #FFFFFF;
+    background-image: linear-gradient(90deg, rgba(114,34,34,.5) 50%, transparent 50%), linear-gradient(rgba(114,34,34,.5) 50%, transparent 50%);
+    background-size: 25px 25px;
+}
+#666666
+.bgpattern-face {
+    background-color: #FFFFFF;
+    background-image: linear-gradient(-45deg, rgba(0,139,167,.5) 25%, transparent 25%, transparent 50%, rgba(0,139,167,.5) 50%, rgba(0,139,167,.5) 75%, transparent 75%, transparent 100%), linear-gradient(45deg, rgba(0,139,167,.5) 25%, transparent 25%, transparent 50%, rgba(0,139,167,.5) 50%, rgba(0,139,167,.5) 75%, transparent 75%, transparent 100%);
+    background-size: 26px 26px;
+}
+
+.bgpattern-zai {
+    background: #D9E5FF;
+    background-image: radial-gradient(#666699 20%, transparent 0), radial-gradient(#666699 20%, transparent 0);
+    background-position: 0 0, 10px 10px;
+    background-size: 20px 20px;
+}
+
+.bgpattern-various {
+    background-color: #E6FFE9;
+    background-image: linear-gradient(45deg, #669966 25%, transparent 25%, transparent 75%, #669966 75%, #669966), linear-gradient(-45deg, #669966 25%, transparent 25%, transparent 75%, #669966 75%, #669966);
+    background-size: 20px 20px;
+}
+
+.bgpattern-single {
+    background-color: #FFDBC9;
+    background-image: linear-gradient(30deg, #CC6600 12%, transparent 12.5%, transparent 87%, #CC6600 87.5%, #CC6600), linear-gradient(150deg, #CC6600 12%, transparent 12.5%, transparent 87%, #CC6600 87.5%, #CC6600), linear-gradient(30deg, #CC6600 12%, transparent 12.5%, transparent 87%, #CC6600 87.5%, #CC6600), linear-gradient(150deg, #CC6600 12%, transparent 12.5%, transparent 87%, #CC6600 87.5%, #CC6600), linear-gradient(60deg, #FF9872 25%, transparent 25.5%, transparent 75%, #FF9872 75%, #FF9872), linear-gradient(60deg, #FF9872 25%, transparent 25.5%, transparent 75%, #FF9872 75%, #FF9872);
+    background-position: 0 0, 0 0, 12.5px 25px, 12.5px 25px, 0 0, 12.5px 25px;
+    background-size: 25px 50px;
+}
+
+.bgpattern-multi {
+    background-color: #A0522D;
+    background-image: linear-gradient(115deg, transparent 75%, #663300 75%), linear-gradient(245deg, transparent 75%, #663300 75%), linear-gradient(115deg, transparent 75%, #663300 75%), linear-gradient(245deg, transparent 75%, #663300 75%);
+    background-position: 0 0, 0 0, 10px -20px, 10px -20px;
+    background-size: 20px 40px;
+}
+
+.bgpattern-home {
+    background-color: #D3D3D3;
+    background-image: linear-gradient(45deg, #DCDCDC 25%, transparent 25%, transparent 75%, #DCDCDC 75%, #DCDCDC), linear-gradient(45deg, #DCDCDC 25%, transparent 25%, transparent 75%, #DCDCDC 75%, #DCDCDC);
+    background-position: 0 0, 25px 25px;
+    background-size: 50px 50px;
+}
+
+.browse_btn {
+    background-color: #d3d3d3;
+    padding: 6px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.non_btn{
+    display: none;
+}

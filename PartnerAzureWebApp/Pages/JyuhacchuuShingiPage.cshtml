@@ -1,0 +1,97 @@
+﻿@page
+@model MichaelAzureWebApp.Pages.JyuhacchuuShingiPageModel
+@{
+    ViewData["Title"] = "JyuhacchuuShingiPage";
+}
+
+<HTML>
+<HEAD>
+    <TITLE>You are welcom to QnAMaker Bot </TITLE>
+    <script crossorigin="anonymous" src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+    <style>
+        #webchat {
+            height: 100%;
+            min-height: 375px;
+            width: 1100px;
+            min-width: 900px;
+            background: gray;
+            box-sizing: border-box;
+        }
+    </style>
+</HEAD>
+<BODY class="bgpattern-ringi">
+    <div align="center" valign="center">
+        <table border="1" bgcolor="#FFFFFF">
+            <tbody>
+                <tr>
+                    <td align="center"><font size="5" face="HGP行書体" color="#008b8b">受発注審議お役立ち</font><font size="10" face="Monotype Corsiva" color="#008b8b">Bot</font></td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        受発注審議お役立ちBotが、審議IDの皆様のお悩みにお答えします。
+                    </td>
+                    <form name="form1">
+                        <input id="botToken" type="hidden" name="botToken" asp-for="botToken" />
+                        <input id="authorizationToken" type="hidden" name="authorizationToken" asp-for="authorizationToken" />
+                        <input id="region" type="hidden" name="region" asp-for="region" />
+                    </form>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="webchat"></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+            (async function () {
+                const styleOptions = {
+                    botAvatarImage:
+                        'https://adminfestcrewstorage.blob.core.windows.net/thumbnails/JyuhacchuuBot.png',
+                    botAvatarInitials: 'DZ',
+                    userAvatarImage:
+                        'https://adminfestcrewstorage.blob.core.windows.net/thumbnails/person2.png',
+                    userAvatarInitials: 'WC'
+                };
+
+                const store = window.WebChat.createStore({}, ({ dispatch }) => next => action => {
+                    if (action.type === 'DIRECT_LINE/CONNECT_FULFILLED') {
+                        dispatch({
+                            type: 'WEB_CHAT/SEND_EVENT',
+                            payload: {
+                                name: 'webchat/join',
+                                value: { language: window.navigator.language }
+                            }
+                        });
+                    }
+
+                    return next(action);
+                });
+
+                const { createCognitiveServicesSpeechServicesPonyfillFactory, createDirectLine, renderWebChat } = window.WebChat;
+                renderWebChat(
+                    {
+                        directLine: createDirectLine({
+                            secret: document.getElementById('botToken').value
+                        }),
+                        locale: 'ja-JP',
+                        webSpeechPonyfillFactory: await createCognitiveServicesSpeechServicesPonyfillFactory({
+                            credentials: {
+                                region: document.getElementById('region').value,
+                                authorizationToken: document.getElementById('authorizationToken').value
+                            }
+                        }),
+                        styleOptions,
+                        store
+                    },
+                    document.getElementById('webchat')
+                );
+                document.querySelector('#webchat > *').focus();
+            })().catch(err => console.error(err));
+    </script>
+</BODY>
+</HTML>
+
+
+

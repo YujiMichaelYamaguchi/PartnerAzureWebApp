@@ -1,0 +1,25 @@
+{
+  "dependencies": {},
+  "parameters": {
+    "FFSBillingRPAMichaelAzureWebApp.subscriptionId": {
+      "Name": "FFSBillingRPAMichaelAzureWebApp.subscriptionId",
+      "Type": "subscription",
+      "Value": "07cf2cf2-a06f-4d0d-891f-1c63687052b0"
+    },
+    "FFSBillingRPAMichaelAzureWebApp.resourceGroupName": {
+      "Name": "FFSBillingRPAMichaelAzureWebApp.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "resource-group4Bot"
+    },
+    "FFSBillingRPAMichaelAzureWebApp.resourceName": {
+      "Name": "FFSBillingRPAMichaelAzureWebApp.resourceName",
+      "Type": null,
+      "Value": "FFSBillingRPAMichaelAzureWebApp"
+    },
+    "subscriptionId": {
+      "Name": "subscriptionId",
+      "Type": "subscription",
+      "Value": "07cf2cf2-a06f-4d0d-891f-1c63687052b0"
+    }
+  }
+}
